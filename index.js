@@ -1,5 +1,5 @@
 const express = require('express');
-const dotenv = require("dotenv");
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const app = express();
 const productRouter = require('./routes/products')
@@ -13,5 +13,4 @@ app.use(express.urlencoded({limit: '10mb', extended: true}));
 
 app.use('/api/products', productRouter)
 
-//app.get('/', (req, res) => res.send('Furniture World!'))
 app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${process.env.PORT}!`))
